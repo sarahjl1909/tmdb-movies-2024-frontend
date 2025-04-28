@@ -1,0 +1,61 @@
+.movieCard {
+    display: flex;
+    align-items: center; 
+    justify-content: space-around;
+    width: 400px; 
+    height: 300px; 
+    border: 1px solid hsl(0, 0%, 80%);
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.1);
+    padding: 10px;
+    
+}
+
+.movieCard img{
+    width: 130px;
+    border-radius: 10px;
+    
+
+}
+
+
+.movieDetails{
+    padding: 30px;
+}
+
+.movieTitle{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.movieVotes{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    padding: 4px;
+    border: 1px solid hsl(0, 0%, 80%);
+    border-radius: 10px;
+    width: 100px; 
+    height: 50px; 
+    overflow: hidden; 
+    text-align: center;
+}
+
+.movieVotes h4, 
+.movieVotes p {
+    margin: 0;
+    font-size: 13px;
+    white-space: nowrap; 
+    max-width: 100%; 
+}
+
+.movieOverview {
+    font-size: 14px;
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; 
+    -webkit-box-orient: vertical;
+  }
