@@ -1,0 +1,19 @@
+html, body, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Layout flexível para manter o footer embaixo */
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer {
+    background: #333;
+    color: #fff;
+    padding: 16px;
+    text-align: center;
+    margin-top: auto; /* Essa linha empurra o footer para o final */
+  }
