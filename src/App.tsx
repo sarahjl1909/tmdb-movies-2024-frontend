@@ -1,14 +1,18 @@
 import { useState } from 'react'
 import './App.css'
-import './components/MovieCard/MovieCard'
+import Navbar from './components/Navbar/Navbar'
+import Footer from './components/Footer/Footer'
+import MovieCard from './components/MovieCard/MovieCard'
 
 function App() {
 
   return (
-
     <div className="App">
-      <h2>TMDB Movies</h2>
-      
+      <Navbar />
+      <MovieCard />
+
+      <MovieCard />
+      <Footer />
     </div>
   
   )
