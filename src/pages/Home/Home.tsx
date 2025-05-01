@@ -1,9 +1,31 @@
-
+import "./index.css";
+import MovieCard from "../../components/MovieCard/MovieCard";
 
 const Home = () => {
-    return (
-        <h1>Home</h1>
-    );
-}
+  return (
+    <div className="containerHome">
+      <div className="containerMovieCard">
+        <MovieCard />
+        <MovieCard />
+        <MovieCard />
+        <MovieCard />
+        <MovieCard />
+        <MovieCard />
+        <MovieCard />
+        <MovieCard />
+        <MovieCard />
+        <MovieCard />
+        <MovieCard />
+        <MovieCard />
+        <MovieCard />
+        <MovieCard />
+        <MovieCard />
+        <MovieCard />
+        <MovieCard />
+        <MovieCard />
+      </div>
+    </div>
+  );
+};
 
 export default Home;
