@@ -1,3 +1,13 @@
 .App {
-   
+}
+
+body {
+  background-color: white;
+  color: black;
+  transition: all 0.3s;
+}
+
+body.dark {
+  background-color: #121212;
+  color: white;
 }
