@@ -1,13 +1,14 @@
 import "./index.css";
 import { GiClapperboard } from "react-icons/gi";
 import { Link } from "react-router-dom";
+import ThemeToggle from "../ThemeToogle/ThemeToogle";
 
 function Navbar() {
   return (
     <nav className="navbar">
       <div className="logoSection">
         <GiClapperboard className="logo" />
-        <span className="siteName">Movies 2024</span>
+        <span className="siteName">Movies</span>
       </div>
 
       <ul className="navLinks">
@@ -26,6 +27,7 @@ function Navbar() {
             About
           </Link>
         </li>
+        <ThemeToggle />
       </ul>
     </nav>
   );
