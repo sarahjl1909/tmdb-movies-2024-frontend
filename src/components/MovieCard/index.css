@@ -9,6 +9,9 @@
 }
 
 .movieCard img {
+  &:hover {
+    transform: scale(0.98);
+  }
   width: 130px;
   border-radius: 10px;
   margin-bottom: 4px;

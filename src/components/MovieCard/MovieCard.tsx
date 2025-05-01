@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./index.css";
 
 interface props {
@@ -19,7 +20,9 @@ function MovieCard() {
 
   return (
     <div className="movieCard">
-      <img src={imga} alt="image film"></img>
+      <Link to={`/movies`}>
+        <img src={imga} alt="image film"></img>
+      </Link>
 
       <h4 className="movieTitle">Title of the movie</h4>
       <div className="movieVotes">
