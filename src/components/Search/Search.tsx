@@ -1,4 +1,4 @@
-import "index.css";
+import "./index.css";
 import { ImSearch } from "react-icons/im";
 
 function Search() {
