@@ -8,8 +8,8 @@ import { ImSearch } from "react-icons/im";
 
 const SearchPage = () => {
   const [data, setData] = useState<searchDTO[]>();
-  const [query, setQuery] = useState<string[]>();
   const [text, setText] = useState<string>("");
+  const [flag, setFlag] = useState<boolean>(false);
 
   useEffect(() => {
     //getData();
@@ -19,6 +19,7 @@ const SearchPage = () => {
     try {
       const response: any = await searchGET(text);
       setData(response);
+      setFlag(true);
     } catch (error) {
       console.log(error);
     }
@@ -59,9 +60,9 @@ const SearchPage = () => {
             ))}
           </div>
         </>
-      ) : (
+      ) : flag ? (
         <h1>Filme não encontrado</h1>
-      )}
+      ) : null}
     </div>
   );
 };
