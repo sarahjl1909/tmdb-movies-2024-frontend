@@ -1,3 +1,5 @@
+//apagar depois os elementos desnecessários
+
 interface CardMovie {
   genres: string[];
   id: number;

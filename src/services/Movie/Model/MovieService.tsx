@@ -1,5 +1,5 @@
 import { GET } from "../../Service";
-import { MovieDTO } from "./MovieModel";
+import { MovieDTO } from "./MovieDTO";
 
 export const movieGET = async () => {
   try {
