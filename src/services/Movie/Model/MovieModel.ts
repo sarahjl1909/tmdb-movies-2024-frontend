@@ -1,7 +1,13 @@
 interface CardMovie {
+  genres: string[];
   id: number;
-  image_url: string;
+  original_language: string;
+  overview: string;
+  poster_path: string;
+  release_data: string;
+  runtime: number;
   title: string;
+  vote_average: number;
 }
 
 export interface MovieDTO {

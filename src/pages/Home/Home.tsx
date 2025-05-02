@@ -10,13 +10,14 @@ const Home = () => {
 
   useEffect(() => {
     getData();
+    console.log(data);
   }, []);
 
   const getData = async () => {
     try {
       const response: any = await movieGET();
       setData(response);
-      console.log(data);
+      console.log(response);
     } catch (error) {
       console.log(error);
     }
@@ -28,24 +29,14 @@ const Home = () => {
         <Search />
       </div>
       <div className="containerMovieCard">
-        <MovieCard img={data?.data[0].image_url} />
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
+        {data?.data.map((movie) => (
+          <MovieCard
+            key={movie.id}
+            img={movie.poster_path}
+            title={movie.title}
+            voteAverage={movie.vote_average}
+          />
+        ))}
       </div>
     </div>
   );
