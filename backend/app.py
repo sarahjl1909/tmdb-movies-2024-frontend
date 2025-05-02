@@ -59,7 +59,6 @@ def get_movies():
     #tratamento de erro
     if not ALL_MOVIES and os.path.exists(DATA_CSV):
         return jsonify({"error": "Erro interno ao carregar dados dos filmes"}), 500
-    
     try:
         page = int(request.args.get('page', 1))
         per_page = int(request.args.get('per_page', 10))
@@ -79,6 +78,16 @@ def get_movies():
         return jsonify({"error": "Não há filmes para exibir nesta página."}), 404
     
     return jsonify(paginated_result)
+
+@app.route('/detail/<int:movie_id>', methods=['GET'])
+def get_movie_by_id(movie_id):
+   
+   movie = next((movie for movie in ALL_MOVIES if int(movie.get('id', -1)) == movie_id), None)
+   
+   if movie is None:
+        return jsonify({"error": f"Filme com ID {movie_id} não encontrado."}), 404
+
+   return jsonify(movie)
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
