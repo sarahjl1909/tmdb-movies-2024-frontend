@@ -1,85 +1,50 @@
 import "./index.css";
 
 interface props {
-  img: string;
-  title: string;
-  releaseDate: string;
-  runtime: string;
-  genre: string;
-  language: string;
-  voteAverage: number;
-  overview: string;
+  id?: number;
+  img?: string;
+  title?: string;
+  release_date?: string;
+  runtime?: number;
+  genre?: string;
+  language?: string;
+  voteAverage?: number;
+  overview?: string;
 }
 
 //function MovieCardDetail({img, title, releaseDate, runtime, genre, language, voteAverage, overview} : props){
 
-function MovieCardDetail() {
-  const imga =
-    "https://image.tmdb.org/t/p/w185/9Rj8l6gElLpRL7Kj17iZhrT5Zuw.jpg";
-
+function MovieCardDetail({
+  img,
+  title,
+  release_date,
+  runtime,
+  genre,
+  language,
+  voteAverage,
+  overview,
+}: props) {
   return (
     <div className="containerMovieCardDetail">
       <div className="movieCardDetail">
-        <img src={imga} alt="image film"></img>
+        <img
+          src={`https://image.tmdb.org/t/p/w500${img}`}
+          alt="image film"
+        ></img>
 
         <div className="movieDetail">
-          <h3 className="movieTitleDetail">Title of the movie</h3>
-          <p className="movieInfoDetail">release date | runtime | genre</p>
-          <p>Language origin</p>
+          <h3 className="movieTitleDetail">{title}</h3>
+          <p className="movieInfoDetail">
+            {release_date} | {runtime} |{genre}
+          </p>
+          <p>{language}</p>
 
           <div className="movieVotesDetail">
             <h4>Rating by viewrs</h4>
-            <p>5</p>
+            <p>{voteAverage}</p>
           </div>
 
-          <p className="movieOverviewDetail">
-            Brief description or summary of the movie. Brief description or
-            summary of the movie. Brief description or summary of the movie.
-            Brief description or summary of the movie. Brief description or
-            summary of the movie. Brief description or summary of the movie.
-            Brief description or summary of the movie. Brief description or
-            summary of the movie. Brief description or summary of the movie.
-            Brief description or summary of the movie. Brief description or
-            summary of the movie. Brief description or summary of the movie.
-            Brief description or summary of the movie. Brief description or
-            summary of the movie. Brief description or summary of the movie.
-            Brief description or summary of the movie. Brief description or
-            summary of the movie. Brief description or summary of the movie.
-            Brief description or summary of the movie. Brief description or
-            summary of the movie. Brief description or summary of the movie.
-            Brief description or summary of the movie. Brief description or
-            summary of the movie. Brief description or summary of the movie.
-            Brief description or summary of the movie. Brief description or
-            summary of the movie. Brief description or summary of the movie.
-            Brief description or summary of the movie. Brief description or
-            summary of the movie. Brief description or summary of the movie.
-            Brief description or summary of the movie. Brief description or
-            summary of the movie. Brief description or summary of the movie.
-            Brief description or summary of the movie. Brief description or
-            summary of the movie. Brief description or summary of the movie.
-            Brief description or summary of the movie. Brief description or
-            summary of the movie. Brief description or summary of the movie.
-            Brief description or summary of the movie. Brief description or
-            summary of the movie. Brief description or summary of the movie.
-            Brief description or summary of the movie. Brief description or
-            summary of the movie. Brief description or summary of the movie.
-            Brief description or summary of the movie. Brief description or
-            summary of the movie. Brief description or summary of the movie.
-            Brief description or summary of the movie. Brief description or
-            summary of the movie. Brief description or summary of the movie.
-            Brief description or summary of the movie. Brief description or
-            summary of the movie. Brief description or summary of the movie.
-            Brief description or summary of the movie. Brief description or
-            summary of the movie. Brief description or summary of the movie.
-            Brief description or summary of the movie. Brief description or
-            summary of the movie. Brief description or summary of the movie.
-            Brief description or summary of the movie. Brief description or
-            summary of the movie. Brief description or summary of the movie.
-            Brief description or summary of the movie. Brief description or
-            summary of the movie. Brief description or summary of the movie.
-            Brief description or summary of the movie. Brief description or
-            summary of the movie. Brief description or summary of the movie.
-          </p>
+          <p className="movieOverviewDetail">{overview}</p>
         </div>
       </div>
     </div>

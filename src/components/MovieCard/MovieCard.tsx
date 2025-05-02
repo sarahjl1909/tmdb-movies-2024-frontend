@@ -16,9 +16,6 @@ interface props {
 //function MovieCardDetail({img, title, releaseDate, runtime, genre, language, voteAverage, overview} : props){
 
 function MovieCard({ onClick, img, title, voteAverage }: props) {
-  const imga: string =
-    "https://image.tmdb.org/t/p/w185/9Rj8l6gElLpRL7Kj17iZhrT5Zuw.jpg";
-
   return (
     <div className="movieCard">
       <img

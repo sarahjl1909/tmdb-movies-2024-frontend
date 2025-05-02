@@ -18,11 +18,6 @@ function Navbar() {
           </Link>
         </li>
         <li>
-          <Link to="/movies" className="link">
-            Movies
-          </Link>
-        </li>
-        <li>
           <Link to="/about" className="link">
             About
           </Link>

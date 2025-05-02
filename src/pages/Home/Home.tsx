@@ -3,7 +3,7 @@ import MovieCard from "../../components/MovieCard/MovieCard";
 import Search from "../../components/Search/Search";
 import { useEffect, useState } from "react";
 import { movieGET } from "../../services/Movie/Model/MovieService";
-import { MovieDTO } from "../../services/Movie/Model/MovieModel";
+import { MovieDTO } from "../../services/Movie/Model/MovieDTO";
 import { useNavigate } from "react-router";
 
 const Home = () => {
