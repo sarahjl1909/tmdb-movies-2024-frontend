@@ -60,9 +60,6 @@ const Home = () => {
 
   return (
     <div className="containerHome">
-      <div className="containerSearch">
-        <Search />
-      </div>
       <div className="containerMovieCard">
         {data?.data.map((movie) => (
           <MovieCard

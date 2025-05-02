@@ -18,6 +18,11 @@ function Navbar() {
           </Link>
         </li>
         <li>
+          <Link to="/search" className="link">
+            Search Movies
+          </Link>
+        </li>
+        <li>
           <Link to="/about" className="link">
             About
           </Link>
