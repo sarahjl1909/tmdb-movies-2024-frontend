@@ -89,5 +89,15 @@ def get_movie_by_id(movie_id):
 
    return jsonify(movie)
 
+@app.route('/search/<string:word>', methods=['GET'])
+def get_search_movies(word):
+    
+    result = [item for item in ALL_MOVIES if word.lower() in item['title'].lower() ]
+    if result ==[]:
+        return jsonify({"error":"Nenhum Filme Encontrado"})
+
+    return jsonify(result)
+
+
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
