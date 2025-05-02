@@ -10,17 +10,43 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 
 const Home = () => {
   const [data, setData] = useState<MovieDTO>();
+  const [page, setPage] = useState<number>(1);
+  const [nextPage, setNextPage] = useState<boolean>(true);
+  const [backPage, setBackPage] = useState<boolean>(true);
 
   useEffect(() => {
     getData();
-    console.log(data);
-  }, []);
+  }, [page]);
+
+  const increasePage = () => {
+    if (data?.total_pages != page) {
+      setPage(page + 1);
+    }
+  };
+  const decreasePage = () => {
+    if (page > 1) {
+      setPage(page - 1);
+    }
+  };
 
   const getData = async () => {
     try {
-      const response: any = await movieGET();
+      const response: any = await movieGET(page);
       setData(response);
-      console.log(response);
+      setPage(response.page);
+
+      setNextPage(true);
+      setBackPage(true);
+
+      if (response?.next_page_url === null) {
+        setNextPage(false);
+      }
+
+      if (response?.previous_page_url === null) {
+        setBackPage(false);
+      }
+      console.log(nextPage);
+      console.log(backPage);
     } catch (error) {
       console.log(error);
     }
@@ -49,13 +75,25 @@ const Home = () => {
         ))}
       </div>
       <div className="containerPagination">
-        <div className="btn">
-          <IoIosArrowRoundBack className="arrowBack" size={80} color="black" />
-        </div>
-        <div className="number">5</div>
-        <div className="btn">
-          <IoIosArrowRoundForward className="arrow" size={80} color="black" />
-        </div>
+        {backPage ? (
+          <div className="btn" onClick={decreasePage}>
+            <IoIosArrowRoundBack
+              className="arrowBack"
+              size={80}
+              color="black"
+            />
+          </div>
+        ) : (
+          <></>
+        )}
+        <div className="number">{data?.page}</div>
+        {nextPage ? (
+          <div className="btn" onClick={increasePage}>
+            <IoIosArrowRoundForward className="arrow" size={80} color="black" />
+          </div>
+        ) : (
+          <></>
+        )}
       </div>
     </div>
   );
