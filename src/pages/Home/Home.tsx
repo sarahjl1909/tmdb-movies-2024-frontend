@@ -74,11 +74,7 @@ const Home = () => {
       <div className="containerPagination">
         {backPage ? (
           <div className="btn" onClick={decreasePage}>
-            <IoIosArrowRoundBack
-              className="arrowBack"
-              size={80}
-              color="black"
-            />
+            <IoIosArrowRoundBack className="arrowBack" size={80} />
           </div>
         ) : (
           <></>
@@ -86,7 +82,7 @@ const Home = () => {
         <div className="number">{data?.page}</div>
         {nextPage ? (
           <div className="btn" onClick={increasePage}>
-            <IoIosArrowRoundForward className="arrow" size={80} color="black" />
+            <IoIosArrowRoundForward className="arrow" size={80} />
           </div>
         ) : (
           <></>

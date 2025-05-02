@@ -5,9 +5,39 @@ body {
   background-color: white;
   color: black;
   transition: all 0.3s;
+  p,
+  h4,
+  li,
+  ul {
+    color: black;
+  }
 }
 
 body.dark {
   background-color: #121212;
+  color: white;
+  p,
+  h4,
+  li,
+  ul,
+  element.style {
+    color: white;
+  }
+}
+
+p,
+h4 {
+  font-family: "Bebas Neue", sans-serif;
+}
+
+h5 {
+  /* coloca a fonte mais tarde*/
+}
+.arrowBack {
+  color: black;
+  transition: color 0.3s;
+}
+
+body.dark .arrowBack {
   color: white;
 }

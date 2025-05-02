@@ -6,6 +6,11 @@
   padding: 16px;
 }
 
+.themeToggle {
+  display: flex;
+  align-items: center;
+}
+
 .logoSection {
   display: flex;
   align-items: center;

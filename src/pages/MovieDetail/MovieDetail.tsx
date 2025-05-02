@@ -29,7 +29,7 @@ const MovieDetail = () => {
   return (
     <div>
       <Link to="/" className="link">
-        <IoIosArrowRoundBack className="arrowBack" size={50} color="black" />
+        <IoIosArrowRoundBack className="arrowBack" size={50} />
       </Link>
 
       <MovieCardDetail
