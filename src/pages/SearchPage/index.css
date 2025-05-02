@@ -1,0 +1,75 @@
+.containerHome {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.containerSearch {
+  margin: 40px 0 20px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.containerMovieCard {
+  display: flex;
+  width: 70%;
+  margin-top: 50px;
+  flex-wrap: wrap;
+  gap: 43px;
+}
+
+.containerPagination {
+  display: flex;
+  flex-direction: row;
+  width: 270px;
+  height: 80px;
+  border: 5px;
+  border-radius: 40px;
+  border: 1px solid #999;
+  gap: 2px;
+}
+
+.bt {
+  &:hover {
+    transform: scale(0.98);
+  }
+  width: 100px;
+  height: 100%;
+}
+
+.number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 36px;
+  font-weight: 200;
+}
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 40px;
+  border: 2px solid #999;
+  padding: 4px 8px;
+}
+
+.searchBox input {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 4px;
+  background: transparent;
+  color: #333;
+  width: 140px;
+}
+
+.searchIcon {
+  color: #333;
+  margin-left: 8px;
+}
