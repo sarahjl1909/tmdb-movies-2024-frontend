@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 import { movieGET } from "../../services/Movie/Model/MovieService";
 import { MovieDTO } from "../../services/Movie/Model/MovieDTO";
 import { useNavigate } from "react-router";
+import { IoIosArrowRoundBack } from "react-icons/io";
+import { IoIosArrowRoundForward } from "react-icons/io";
 
 const Home = () => {
   const [data, setData] = useState<MovieDTO>();
@@ -45,6 +47,15 @@ const Home = () => {
             onClick={() => showMoreDetails(movie.id)}
           />
         ))}
+      </div>
+      <div className="containerPagination">
+        <div className="btn">
+          <IoIosArrowRoundBack className="arrowBack" size={80} color="black" />
+        </div>
+        <div className="number">5</div>
+        <div className="btn">
+          <IoIosArrowRoundForward className="arrow" size={80} color="black" />
+        </div>
       </div>
     </div>
   );
