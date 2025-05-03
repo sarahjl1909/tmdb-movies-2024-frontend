@@ -1,8 +1,11 @@
+import "./index.css";
 
 const NotFound = () => {
-    return (
-        <h1>404 - Página não encontrada</h1>
-    );
-}
+  return (
+    <div className="notFound">
+      <h1>404 - Page not found </h1>
+    </div>
+  );
+};
 
 export default NotFound;

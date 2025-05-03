@@ -6,6 +6,10 @@
   padding: 16px;
 }
 
+.siteName {
+  font-size: 24px;
+}
+
 .themeToggle {
   display: flex;
   align-items: center;

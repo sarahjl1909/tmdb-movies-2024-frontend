@@ -8,26 +8,28 @@ function Navbar() {
     <nav className="navbar">
       <div className="logoSection">
         <GiClapperboard className="logo" />
-        <span className="siteName">Movies</span>
+        <p className="siteName">Movies</p>
       </div>
 
       <ul className="navLinks">
         <li>
           <Link to="/" className="link">
-            Home
+            <p>Home</p>
           </Link>
         </li>
         <li>
           <Link to="/search" className="link">
-            Search Movies
+            <p>Search Movies</p>
           </Link>
         </li>
         <li>
           <Link to="/about" className="link">
-            About
+            <p>About</p>
           </Link>
         </li>
-        <ThemeToggle />
+        <div className="themeToggle">
+          <ThemeToggle />
+        </div>
       </ul>
     </nav>
   );
